@@ -25,8 +25,14 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Main CSS File (preload + fallback) -->
+  <link rel="preload" href="assets/css/main.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="assets/css/main.min.css" rel="stylesheet"></noscript>
+  <style>
+    /* Enforce testimonial image size immediately to avoid large images before stylesheet loads */
+    .testimonials .testimonial-item .testimonial-img{width:90px !important;max-width:90px !important;height:auto !important;display:block}
+    @media (max-width:767px){.testimonials .testimonial-item .testimonial-img{width:72px !important;max-width:72px !important}}
+  </style>
 
 </head>
 
@@ -37,7 +43,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/logo.png" alt="" loading="eager">
         <h1 class="sitename">Rise Paints & Chemicals</h1> <span>.</span>
       </a>
 
@@ -95,7 +101,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-exterior">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/exterior-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/exterior-1.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Exterior Product 1</h4>
                   <p>High Quality 100% Paint</p>
@@ -106,7 +112,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-interior">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Interior Product 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -117,7 +123,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-chemicals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/chemicals-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/chemicals-1.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Chemical 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -128,7 +134,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bucket">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/bucket-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/bucket-1.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Paint Bucket 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -139,7 +145,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-exterior">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Exterior Product 2</h4>
                   <p>Try beauty of home with our exterior paints</p>
@@ -150,7 +156,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-interior">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Interior Product 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -161,7 +167,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-chemicals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/chemicals-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/chemicals-2.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Chemical 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -172,7 +178,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bucket">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/bucket-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/bucket-1.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Paint Bucket 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -183,7 +189,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-exterior">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/exterior-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/exterior-1.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Exterior Product 3</h4>
                   <p>Name is enough 😎</p>
@@ -194,7 +200,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-interior">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/exterior-2.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Interior Product 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -205,7 +211,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-chemicals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/chemicals-3.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/chemicals-3.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Chemical 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -216,7 +222,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bucket">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/bucket-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/bucket-1.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Paint Bucket 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -227,7 +233,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-chemicals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product/chemicals-4.jpg" class="img-fluid" alt="">
+                <img src="assets/img/product/chemicals-4.jpg" class="img-fluid" alt="" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Chemical 4</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -264,17 +270,17 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Main JS File (deferred, minified) -->
+  <script src="assets/js/main.min.js" defer></script>
 
 </body>
 
