@@ -26,14 +26,3 @@ PowerShell example (from project root):
 python -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```
-
-(You can also use the VS Code Live Server extension or any static file server.)
-
-**Notes & Recommendations (next steps):**
-- Optimize images: convert to WebP/AVIF and create responsive `srcset` sizes for product and testimonial images.
-- Reduce Google Fonts payload to only needed families/weights or self-host a subset to improve font loading.
-- Consider subsetting FontAwesome (or use SVG icons) to avoid loading the entire icon set.
-- Add long cache headers and enable gzip/Brotli on your server or use a CDN for global delivery.
-- (Optional) Inline critical CSS for above-the-fold content to improve LCP.
-
-If you want, I can: optimize images and replace the current images with WebP copies and update `srcset`, or trim the Google Fonts usage — tell me which one to do next and I'll implement it.
